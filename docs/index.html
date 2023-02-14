@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="description" content="一款基于 LeanCloud 存储的无后端评论系统。"/>
+  <link rel="icon" href="favicon.ico"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4.12.2/themes/vue.css">
+  <link rel="stylesheet" href="assets/override.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/seatwork/pagetalk/pagetalk.min.css"/>
+  <script src="//cdn.jsdelivr.net/gh/seatwork/pagetalk/pagetalk.min.js"></script>
+  <title>PageTalk</title>
+</head>
+<body>
+<div id="app">Loading...</div>
+
+<script>
+$docsify = {
+  coverpage: 'COVER.md',
+  homepage: '//cdn.jsdelivr.net/gh/seatwork/pagetalk/README.md',
+  repo: 'seatwork/pagetalk',
+  topMargin: 20,
+  plugins: [
+    function(hook) {
+      hook.mounted(function() {
+        const dom = Docsify.dom
+        const div = dom.create('div')
+        div.id = 'pagetalk-container'
+        div.style = "max-width:900px;margin:0 auto;padding:0 45px 30px 30px;"
+        dom.appendTo(dom.find('.content'), div)
+      })
+      hook.doneEach(function() {
+        new PageTalk({
+          container: '#pagetalk-container',
+          className: 'PageTalk_Demo',
+          appId: '6ErKPuAkh995HR4rP5nWzvfd-gzGzoHsz',
+          appKey: 'uf8kFhfz4ctoQo7dXPcStPVW'
+        })
+      })
+    }
+  ]
+}
+</script>
+<script src="//cdn.jsdelivr.net/npm/docsify@4.12.2/lib/docsify.js"></script>
+
+</body>
+</html>
