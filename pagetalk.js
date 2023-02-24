@@ -64,7 +64,7 @@ class PageTalk {
   }
 
   // comment: { nickname, email, website, content }
-  async addComment(e) {
+  async addComment() {
     const textarea = this.element.textarea
     const comment = {
       nickname: this.element.nickname.value.trim(),
@@ -105,7 +105,7 @@ class PageTalk {
 
   createSection(comment) {
     const item = this._(`<div class="pgtk-section"><div class="pgtk-avatar"><img src="${comment.avatar}"/><div class="pgtk-triangle"></div></div><div class="pgtk-comment"><div class="pgtk-profile"><div><a target="_blank" href="${comment.website}">${comment.nickname}</a> 发表于 ${comment.createdAt}</div><svg id="pgtk-reply-icon" viewBox="0 0 1332 1024" width="14"><path d="M529.066665 273.066666 529.066665 0 51.2 477.866666 529.066665 955.733335 529.066665 675.84C870.4 675.84 1109.333335 785.066665 1280 1024 1211.733335 682.666665 1006.933335 341.333334 529.066665 273.066666"></path></svg></div><div class="pgtk-markdown">${comment.htmlContent}</div></div></div>`)
-    item.querySelector('#pgtk-reply-icon').addEventListener('click', e => this.reply(comment))
+    item.querySelector('#pgtk-reply-icon').addEventListener('click', () => this.reply(comment))
     return item
   }
 
@@ -224,7 +224,7 @@ class PageTalk {
   }
 
   importScripts(urls) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, _) => {
       const head = document.getElementsByTagName('head')[0]
       const load = i => {
         const script = document.createElement('script')
