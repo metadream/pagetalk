@@ -6,8 +6,8 @@ class PageTalk {
    */
   constructor(options) {
     this.importScripts([
-      'https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js',
-      'https://cdn.jsdelivr.net/npm/marked@0.6.3/marked.min.js'
+      'https://cdn.unpkg.net/blueimp-md5@2.18.0/js/md5.min.js',
+      'https://cdn.unpkg.net/marked@0.6.3/marked.min.js'
     ]).then(() => {
       marked.setOptions({
         breaks: true,
