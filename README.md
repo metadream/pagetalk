@@ -11,8 +11,8 @@
 在任何需要添加评论的页面放置如下代码即可：
 
 ```html
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/metadream/pagetalk/pagetalk.min.css"/>
-<script src="//cdn.jsdelivr.net/gh/metadream/pagetalk/pagetalk.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/metadream/pagetalk@latest/pagetalk.min.css"/>
+<script src="//cdn.jsdelivr.net/gh/metadream/pagetalk@latest/pagetalk.min.js"></script>
 
 <div id="pagetalk"></div>
 <script>
