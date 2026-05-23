@@ -1,5 +1,7 @@
 # Make Your Page Talk
 
+!> LeanCloud 将于 2027年1月12日 停止对外提供服务，详情请见 [关于 LeanCloud 停止对外提供服务的通知](https://docs.leancloud.cn/sdk/announcements/sunset-announcement)。停服之后，本项目将无法继续使用，可自行修改源代码，通过自身部署或其他云端后台保存数据。
+
 ## 开始使用
 
 ### 1. 准备账号
